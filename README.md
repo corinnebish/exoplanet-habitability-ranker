@@ -21,7 +21,7 @@ An interactive Streamlit app with a distance filter and six tabs. **[Explore it 
 | **3D Galaxy Map** | **Discovery Timeline** |
 | ![3D galaxy map](screenshots/5_galaxy_map.png) | ![Discovery timeline](screenshots/6_discovery_timeline.png) |
 | **Planet Profile** | **Key Findings** |
-| ![Planet profile](screenshots/7_planet_profile.png) | ![Key findings](screenshots/4_key_findings.png) |
+| ![Planet profile](screenshots/7_planet_profile_v2.png) | ![Key findings](screenshots/4_key_findings.png) |
 
 ---
 

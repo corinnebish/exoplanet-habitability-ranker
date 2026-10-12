@@ -11,6 +11,7 @@ Input:  data/processed/planets_clustered.csv, data/raw/phl_habitable_worlds.csv
 Output: data/processed/planets_scored.csv, models/logreg.joblib
 """
 
+import json
 import re
 from pathlib import Path
 
@@ -110,6 +111,21 @@ def main() -> None:
 
     df.to_csv(OUT, index=False)
     joblib.dump(model, ROOT / "models" / "logreg.joblib")
+
+    # Saved so the dashboard shows the real numbers instead of hard-coded ones.
+    metrics = {
+        "n_planets": int(len(df)),
+        "n_habitable_labels": int(y.sum()),
+        "test_found": int(tp), "test_total_habitable": int(tp + fn),
+        "test_false_alarms": int(fp), "test_correct_rejections": int(tn),
+        "test_pr_auc": round(float(average_precision_score(y_te, p_te)), 3),
+        "cv_pr_auc": round(float(average_precision_score(y, p_cv)), 3),
+        "baseline_pr_auc": round(float(y.mean()), 3),
+        "earth_score": round(float(model.predict_proba(earth)[0, 1] * 100), 1),
+        "coefficients": coefs.round(3).to_dict(),
+    }
+    (ROOT / "reports").mkdir(exist_ok=True)
+    (ROOT / "reports" / "metrics.json").write_text(json.dumps(metrics, indent=2))
 
 
 if __name__ == "__main__":

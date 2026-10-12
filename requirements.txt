@@ -5,5 +5,4 @@ plotly
 streamlit
 requests
 matplotlib
-jupyter
 joblib

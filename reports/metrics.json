@@ -1,0 +1,20 @@
+{
+  "n_planets": 5729,
+  "n_habitable_labels": 65,
+  "test_found": 16,
+  "test_total_habitable": 16,
+  "test_false_alarms": 55,
+  "test_correct_rejections": 1362,
+  "test_pr_auc": 0.509,
+  "cv_pr_auc": 0.57,
+  "baseline_pr_auc": 0.011,
+  "earth_score": 99.5,
+  "coefficients": {
+    "starlight_gap_sq": -7.963,
+    "log_starlight": -6.572,
+    "radius_gap_sq": -5.063,
+    "mass_gap_sq": -1.099,
+    "log_radius": -0.504,
+    "star_temp": 0.338
+  }
+}

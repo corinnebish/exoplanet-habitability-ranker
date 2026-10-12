@@ -30,6 +30,8 @@ COLUMNS = [
     "st_rad",           # star radius (Sun radii)
     "st_mass",          # star mass (Sun masses)
     "sy_dist",          # distance from Earth (parsecs)
+    "ra",               # sky position: right ascension (degrees), used for the 3D map
+    "dec",              # sky position: declination (degrees)
     "discoverymethod",  # e.g. Transit, Radial Velocity
     "disc_year",        # year discovered
 ]

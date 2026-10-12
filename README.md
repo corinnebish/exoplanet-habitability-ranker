@@ -11,6 +11,20 @@
 ## What it does
 Uses machine learning on real NASA data to give every confirmed exoplanet an **Earth-likeness score from 0 to 100**, then lets anyone explore the results in an interactive dashboard: a 3D map of where the planets are, an animated 30-year discovery timeline, and a profile for every planet.
 
+## The Dashboard
+
+An interactive Streamlit app with a distance filter and six tabs. **[Explore it live here.](https://exoplanet-ranker.streamlit.app)**
+
+| Animated Intro | Explore |
+|---|---|
+| ![Animated intro](screenshots/1_intro.png) | ![Explore chart](screenshots/2_explore.png) |
+| **3D Galaxy Map** | **Discovery Timeline** |
+| ![3D galaxy map](screenshots/5_galaxy_map.png) | ![Discovery timeline](screenshots/6_discovery_timeline.png) |
+| **Planet Profile** | **Key Findings** |
+| ![Planet profile](screenshots/7_planet_profile.png) | ![Key findings](screenshots/4_key_findings.png) |
+
+---
+
 ## Key results
 - **5,729 planets** analyzed from the NASA Exoplanet Archive
 - **4 planet types** found automatically with K-Means clustering; Earth falls in "Warm Small Planets"

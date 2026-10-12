@@ -147,13 +147,14 @@ def planet_card(name: str, where: str) -> None:
     with left:
         gauge = go.Figure(go.Indicator(
             mode="gauge+number", value=p["earth_likeness_score"],
-            number={"suffix": " / 100"},
+            number={"font": {"size": 46}, "valueformat": ".1f"},
             gauge={"axis": {"range": [0, 100]}, "bar": {"color": "#7dd3fc"},
                    "steps": [{"range": [0, 10], "color": "#3b1d1d"}, {"range": [10, 50], "color": "#3b2f1d"},
                              {"range": [50, 90], "color": "#3a3a1d"}, {"range": [90, 100], "color": "#1d3b26"}]},
             title={"text": "Earth-likeness score"},
         ))
-        gauge.update_layout(template=PLOT_TEMPLATE, height=230, margin=dict(t=50, b=0, l=20, r=20))
+        gauge.update_layout(template=PLOT_TEMPLATE, height=250, margin=dict(t=60, b=10, l=35, r=35),
+                            paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)")
         st.plotly_chart(gauge, use_container_width=True, config=CHART_CONFIG, key=f"gauge_{where}")
         st.markdown(f"### {name}\n**{score_label(p['earth_likeness_score'])}**")
         icon, _ = GROUP_INFO[p["cluster_name"]]
@@ -184,7 +185,8 @@ def planet_card(name: str, where: str) -> None:
                      template=PLOT_TEMPLATE, title="Compared to Earth (dashed line = exactly Earth)")
         bar.add_vline(x=1, line_dash="dash", line_color="gold")
         bar.update_traces(marker_color="#7dd3fc")
-        bar.update_layout(height=280, margin=dict(t=40, b=10), xaxis_title="× Earth's value", yaxis_title="")
+        bar.update_layout(height=280, margin=dict(t=40, b=10), xaxis_title="× Earth's value", yaxis_title="",
+                          paper_bgcolor="rgba(0,0,0,0)", plot_bgcolor="rgba(0,0,0,0)")
         bar.update_xaxes(**RATIO_TICKS)
         st.plotly_chart(bar, use_container_width=True, config=CHART_CONFIG, key=f"compare_{where}")
         if p["mass_imputed"]:

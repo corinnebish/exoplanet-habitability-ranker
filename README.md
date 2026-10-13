@@ -2,9 +2,9 @@
 
 **Which of the 5,700+ planets found beyond our solar system are most like Earth?**
 
-[![Launch the app](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://exoplanet-ranker.streamlit.app)
+[![Launch the app](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://exoplanet-habitability-ranker-228994007025.us-central1.run.app)
 
-### 👉 [**Open the live dashboard**](https://exoplanet-ranker.streamlit.app): no download or setup needed
+### 👉 [**Open the live dashboard**](https://exoplanet-habitability-ranker-228994007025.us-central1.run.app): no download or setup needed
 
 ---
 
@@ -13,7 +13,7 @@ Uses machine learning on real NASA data to give every confirmed exoplanet an **E
 
 ## The Dashboard
 
-An interactive Streamlit app with a distance filter and six tabs. **[Explore it live here.](https://exoplanet-ranker.streamlit.app)**
+An interactive Streamlit app with a distance filter and six tabs. **[Explore it live here.](https://exoplanet-habitability-ranker-228994007025.us-central1.run.app)**
 
 | Animated Intro | Explore |
 |---|---|

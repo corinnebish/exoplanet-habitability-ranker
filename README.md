@@ -2,7 +2,7 @@
 
 **Which of the 5,700+ planets found beyond our solar system are most like Earth?**
 
-[![Launch the app](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://exoplanet-habitability-ranker-228994007025.us-central1.run.app)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-2ea44f?style=for-the-badge)](https://exoplanet-habitability-ranker-228994007025.us-central1.run.app)
 
 ### 👉 [**Open the live dashboard**](https://exoplanet-habitability-ranker-228994007025.us-central1.run.app): no download or setup needed
 
